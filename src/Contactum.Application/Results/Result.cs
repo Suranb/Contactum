@@ -1,19 +1,40 @@
 namespace Contactum.Application.Results
 {
-    public class Result
+    public class Result<T>
     {
-        public bool IsSuccess { get; init; }
-        public string? Error { get; init; }
+        public bool IsSuccess { get; }
+        public T? Value { get; }
+        public string? Error { get; }
+        public ErrorType ErrorType { get; }
 
-        public static Result Success() => new() { IsSuccess = true };
-        public static Result Failure(string error) => new() { IsSuccess = false, Error = error };
+        private Result(bool isSuccess, T? value, string? error, ErrorType errorType)
+        {
+            IsSuccess = isSuccess;
+            Value = value;
+            Error = error;
+            ErrorType = errorType;
+        }
+
+        public static Result<T> Success(T value)
+            => new(true, value, null, ErrorType.None);
+
+        public static Result<T> Failure(string error, ErrorType errorType = ErrorType.Failure)
+            => new(false, default, error, errorType);
+
+        public static Result<T> NotFound(string error = "Resource not found")
+            => new(false, default, error, ErrorType.NotFound);
+
+        public static Result<T> ValidationError(string error)
+            => new(false, default, error, ErrorType.Validation);
     }
 
-    public class Result<T> : Result
+    public enum ErrorType
     {
-        public T? Value { get; init; }
-
-        public static Result<T> Success(T value) => new() { IsSuccess = true, Value = value };
-        public static new Result<T> Failure(string error) => new() { IsSuccess = false, Error = error };
+        None,
+        Failure,        // Generic business logic failure
+        NotFound,       // Entity not found
+        Validation,     // Validation error
+        Unauthorized,   // Auth error
+        Forbidden       // Permission error
     }
 }

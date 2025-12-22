@@ -1,4 +1,3 @@
-using System;
 using Contactum.Application.Interfaces;
 using Contactum.Application.Interfaces.Repositories;
 using Contactum.Infrastructure.Repositories;

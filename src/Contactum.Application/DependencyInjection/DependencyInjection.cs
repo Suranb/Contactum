@@ -9,8 +9,8 @@ public static class DependencyInjection
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         // Register all handlers
+        services.AddScoped<IGetCompanyByIdHandler, GetCompanyByIdHandler>();
         services.AddScoped<ICreateCompanyHandler, CreateCompanyHandler>();
-        // Add more handlers as you create them
 
         return services;
     }

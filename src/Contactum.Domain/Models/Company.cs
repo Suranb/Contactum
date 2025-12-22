@@ -17,8 +17,9 @@ public class Company
     public Company(string name, int? organizationNumber = null, string? description = null)
     {
         Name = name;
+        Description = description;
         OrganizationNumber = organizationNumber;
-        CreatedAt = DateTime.UtcNow;
-        UpdatedAt = DateTime.UtcNow;
+        CreatedAt = DateTime.UtcNow.AddHours(1);
+        UpdatedAt = DateTime.UtcNow.AddHours(1);
     }
 }
