@@ -1,6 +1,12 @@
 @Contactum.Api_HostAddress = http://localhost:5251
 
-GET {{Contactum.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{Contactum.Api_HostAddress}}/api/company/createCompany
+Content-Type: application/json
+
+{
+    "name": "New Company",
+    "description": "This is a newly created company."
+}
+
 
 ###

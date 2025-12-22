@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contactum.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d19fd55b64e660fae3903708595aa7d678c5bde9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3b10c63130c41f9b5ebf070ba319715e2544cd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contactum.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contactum.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
