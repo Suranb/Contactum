@@ -1,12 +1,11 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Contactum.Domain.Models;
 
 public class Person
 {
-    [Key] public int PersonId { get; set; }
-    [Required] public string? FirstName { get; set; }
+    public int PersonId { get; set; }
+    public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public string? Email { get; set; }
 

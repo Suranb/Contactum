@@ -1,13 +1,24 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-
 namespace Contactum.Domain.Models;
 
 public class Company
 {
-    [Key] public int Id { get; set; }
-    [MinLength(2)] public string Name { get; set; }
-    public int? OrganizationNumber { get; set; } // Not Required for now
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int? OrganizationNumber { get; set; }
+    public string? Description { get; set; }
+    public Person? Owner { get; set; }
+    public Person? ContactPerson { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
+
+    private Company() { }
+
+
+    public Company(string name, int? organizationNumber = null, string? description = null)
+    {
+        Name = name;
+        OrganizationNumber = organizationNumber;
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
+    }
 }

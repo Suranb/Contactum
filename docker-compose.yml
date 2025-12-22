@@ -1,0 +1,26 @@
+﻿services:
+  postgres:
+    image: postgres:17
+    container_name: Contactum_postgres
+    environment:
+      POSTGRES_USER: suran
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: Contactum
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: contactum_pgadmin
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
