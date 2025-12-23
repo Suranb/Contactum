@@ -1,42 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\Contactum\\src\\Contactum.Api\\Contactum.Api.csproj": {}
+    "/Users/suranbasharati/Contactum/src/Contactum.Api/Contactum.Api.csproj": {}
   },
   "projects": {
-    "C:\\Development\\Contactum\\src\\Contactum.Api\\Contactum.Api.csproj": {
+    "/Users/suranbasharati/Contactum/src/Contactum.Api/Contactum.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\Contactum\\src\\Contactum.Api\\Contactum.Api.csproj",
+        "projectUniqueName": "/Users/suranbasharati/Contactum/src/Contactum.Api/Contactum.Api.csproj",
         "projectName": "Contactum.Api",
-        "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Api\\Contactum.Api.csproj",
-        "packagesPath": "C:\\Users\\suran\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\Contactum\\src\\Contactum.Api\\obj\\",
+        "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Api/Contactum.Api.csproj",
+        "packagesPath": "/Users/suranbasharati/.nuget/packages/",
+        "outputPath": "/Users/suranbasharati/Contactum/src/Contactum.Api/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\suran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/suranbasharati/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj": {
-                "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj"
+              "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj": {
+                "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj"
               },
-              "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\Contactum.Infrastructure.csproj": {
-                "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\Contactum.Infrastructure.csproj"
+              "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj": {
+                "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj"
               }
             }
           }
@@ -87,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -505,36 +500,31 @@
         }
       }
     },
-    "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj": {
+    "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj",
+        "projectUniqueName": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj",
         "projectName": "Contactum.Application",
-        "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj",
-        "packagesPath": "C:\\Users\\suran\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\Contactum\\src\\Contactum.Application\\obj\\",
+        "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj",
+        "packagesPath": "/Users/suranbasharati/.nuget/packages/",
+        "outputPath": "/Users/suranbasharati/Contactum/src/Contactum.Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\suran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/suranbasharati/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj": {
-                "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj"
+              "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj": {
+                "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj"
               }
             }
           }
@@ -576,7 +566,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -854,28 +844,23 @@
         }
       }
     },
-    "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj": {
+    "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj",
+        "projectUniqueName": "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj",
         "projectName": "Contactum.Domain",
-        "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj",
-        "packagesPath": "C:\\Users\\suran\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\Contactum\\src\\Contactum.Domain\\obj\\",
+        "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj",
+        "packagesPath": "/Users/suranbasharati/.nuget/packages/",
+        "outputPath": "/Users/suranbasharati/Contactum/src/Contactum.Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\suran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/suranbasharati/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -915,7 +900,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1193,39 +1178,34 @@
         }
       }
     },
-    "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\Contactum.Infrastructure.csproj": {
+    "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\Contactum.Infrastructure.csproj",
+        "projectUniqueName": "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj",
         "projectName": "Contactum.Infrastructure",
-        "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\Contactum.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\suran\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\Contactum\\src\\Contactum.Infrastructure\\obj\\",
+        "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj",
+        "packagesPath": "/Users/suranbasharati/.nuget/packages/",
+        "outputPath": "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\suran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/suranbasharati/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj": {
-                "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj"
+              "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj": {
+                "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj"
               },
-              "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj": {
-                "projectPath": "C:\\Development\\Contactum\\src\\Contactum.Domain\\Contactum.Domain.csproj"
+              "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj": {
+                "projectPath": "/Users/suranbasharati/Contactum/src/Contactum.Domain/Contactum.Domain.csproj"
               }
             }
           }
@@ -1281,7 +1261,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
