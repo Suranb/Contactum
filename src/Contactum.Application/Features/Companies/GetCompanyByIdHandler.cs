@@ -1,4 +1,3 @@
-using System;
 using Contactum.Application.Interfaces.Features.Companies;
 using Contactum.Application.Interfaces.Repositories;
 using Contactum.Application.Results;
@@ -22,7 +21,7 @@ public class GetCompanyByIdHandler : IGetCompanyByIdHandler
 
         if (company is null)
         {
-            return Result<Company>.NotFound($"Company with ID {id} not found");
+            return Result<Company>.NotFound($"Company with ID '{id}' not found");
         }
 
         return Result<Company>.Success(company);

@@ -1,19 +1,18 @@
 using Contactum.Api.Controllers.BaseController;
 using Contactum.Application.Features.Companies;
 using Contactum.Application.Interfaces.Features.Companies;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contactum.Api.Controllers.Company
 {
-    [Route("api/[controller]")]
+    [Route("api/companies")]
     [ApiController]
-    public class CompaniesController : BaseApiController
+    public class CompanyController : BaseApiController
     {
         private readonly IGetCompanyByIdHandler _getCompanyByIdHandler;
         private readonly ICreateCompanyHandler _createCompanyHandler;
 
-        public CompaniesController(
+        public CompanyController(
             IGetCompanyByIdHandler getCompanyByIdHandler,
             ICreateCompanyHandler createCompanyHandler)
         {

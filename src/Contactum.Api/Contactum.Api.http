@@ -1,11 +1,11 @@
 @Contactum.Api_HostAddress = http://localhost:5251
 
 ### Get Company By Id
-GET {{Contactum.Api_HostAddress}}/api/company/getCompanyById?id=1
+GET {{Contactum.Api_HostAddress}}/api/companies/1
 Accept: application/json
 
 ###
-POST {{Contactum.Api_HostAddress}}/api/company/createCompany
+POST {{Contactum.Api_HostAddress}}/api/companies/
 Content-Type: application/json
 
 {

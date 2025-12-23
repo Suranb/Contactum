@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contactum.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787fc4cc2bfe3887877b8eb35acfd2ad9b2ab84a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a2fb7ebb618441150a81e4f42bb9cbb27e8999d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contactum.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contactum.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

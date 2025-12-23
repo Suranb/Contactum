@@ -1,5 +1,4 @@
 using Contactum.Application.Results;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contactum.Api.Controllers.BaseController
