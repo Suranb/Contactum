@@ -11,13 +11,23 @@ namespace Contactum.Api.Controllers.Company
     {
         private readonly IGetCompanyByIdHandler _getCompanyByIdHandler;
         private readonly ICreateCompanyHandler _createCompanyHandler;
+        private readonly IGetAllCompaniesHandler _getCompaniesHandler;
 
         public CompanyController(
             IGetCompanyByIdHandler getCompanyByIdHandler,
-            ICreateCompanyHandler createCompanyHandler)
+            ICreateCompanyHandler createCompanyHandler,
+            IGetAllCompaniesHandler getAllCompaniesHandler)
         {
             _getCompanyByIdHandler = getCompanyByIdHandler;
             _createCompanyHandler = createCompanyHandler;
+            _getCompaniesHandler = getAllCompaniesHandler;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _getCompaniesHandler.HandleAsync();
+            return HandleResult(result);
         }
 
         [HttpGet("{id}")]

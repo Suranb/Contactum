@@ -11,6 +11,8 @@ public static class DependencyInjection
         // Register all handlers
         services.AddScoped<IGetCompanyByIdHandler, GetCompanyByIdHandler>();
         services.AddScoped<ICreateCompanyHandler, CreateCompanyHandler>();
+        services.AddScoped<IGetAllCompaniesHandler, GetAllCompaniesHandler>();
+
 
         return services;
     }

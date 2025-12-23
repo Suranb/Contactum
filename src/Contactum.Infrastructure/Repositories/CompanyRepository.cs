@@ -1,6 +1,7 @@
 using System;
 using Contactum.Application.Interfaces.Repositories;
 using Contactum.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contactum.Infrastructure.Repositories;
 
@@ -19,9 +20,10 @@ public class CompanyRepository : ICompanyRepository
         await _context.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<Company>> GetAllAsync()
+    public async Task<IReadOnlyCollection<Company>> GetAllAsync()
     {
-        return Task.FromResult(_context.Companies.AsEnumerable());
+        var companies = await _context.Companies.ToListAsync();
+        return companies.AsReadOnly();
     }
 
     public async Task<Company?> GetByIdAsync(int id)
