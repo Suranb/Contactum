@@ -14,8 +14,8 @@ POST {{Contactum.Api_HostAddress}}/api/companies/
 Content-Type: application/json
 
 {
-    "name": "SuperOffice",
-    "description": "SuperOffice CRM."
+    "description": "SuperOffice CRM.",
+    "OrganizationNumber": "123"
 }
 
 

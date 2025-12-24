@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Pl9zTiFSjCI=",
+  "dgSpecHash": "wjeid2ii5lM=",
   "success": true,
   "projectFilePath": "/Users/suranbasharati/Contactum/src/Contactum.Infrastructure/Contactum.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/suranbasharati/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/Users/suranbasharati/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "/Users/suranbasharati/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/suranbasharati/.nuget/packages/microsoft.build/17.7.2/microsoft.build.17.7.2.nupkg.sha512",
     "/Users/suranbasharati/.nuget/packages/microsoft.build.framework/17.14.28/microsoft.build.framework.17.14.28.nupkg.sha512",

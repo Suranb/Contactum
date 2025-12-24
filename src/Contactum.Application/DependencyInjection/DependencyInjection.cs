@@ -1,5 +1,5 @@
 using Contactum.Application.Features.Companies;
-using Contactum.Application.Interfaces.Features.Companies;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Contactum.Application.DependencyInjection;
@@ -13,7 +13,8 @@ public static class DependencyInjection
         services.AddScoped<ICreateCompanyHandler, CreateCompanyHandler>();
         services.AddScoped<IGetAllCompaniesHandler, GetAllCompaniesHandler>();
 
-
+        services.AddValidatorsFromAssemblyContaining<CreateCompanyCommandValidator>();
+        
         return services;
     }
 }

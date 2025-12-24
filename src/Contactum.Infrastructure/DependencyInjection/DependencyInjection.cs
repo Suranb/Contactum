@@ -14,10 +14,13 @@ public static class DependencyInjection
         IConfiguration configuration)
     {
         services.AddDbContext<ContactumDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(
+                configuration.GetConnectionString("DefaultConnection"),
+                x => x.MigrationsAssembly(typeof(ContactumDbContext).Assembly.FullName)
+            ));
 
-        services.AddScoped<IUnitOfWork, Infrastructure.UnitOfWork.UnitOfWork>();
 
+        services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
         services.AddScoped<ICompanyRepository, CompanyRepository>();
 
         return services;

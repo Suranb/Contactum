@@ -1,6 +1,5 @@
 using Contactum.Api.Controllers.BaseController;
 using Contactum.Application.Features.Companies;
-using Contactum.Application.Interfaces.Features.Companies;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contactum.Api.Controllers.Company

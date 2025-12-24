@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WFYfrvawxDg=",
+  "dgSpecHash": "LsrZrKQ0wHo=",
   "success": true,
   "projectFilePath": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/suranbasharati/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/Users/suranbasharati/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "/Users/suranbasharati/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.1/microsoft.extensions.dependencyinjection.10.0.1.nupkg.sha512",
     "/Users/suranbasharati/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.1/microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512"
   ],

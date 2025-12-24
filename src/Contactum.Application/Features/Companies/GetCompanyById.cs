@@ -1,4 +1,3 @@
-using Contactum.Application.Interfaces.Features.Companies;
 using Contactum.Application.Interfaces.Repositories;
 using Contactum.Application.Results;
 using Contactum.Domain.Models;
@@ -26,4 +25,9 @@ public class GetCompanyByIdHandler : IGetCompanyByIdHandler
 
         return Result<Company>.Success(company);
     }
+}
+
+public interface IGetCompanyByIdHandler
+{
+    Task<Result<Company>> HandleAsync(int id);
 }

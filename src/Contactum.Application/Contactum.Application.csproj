@@ -14,12 +14,15 @@
     <Folder Include="DependencyInjection\" />
     <Folder Include="DTOs\" />
     <Folder Include="Features\Person\" />
+    <Folder Include="Interfaces/Features/Companies/" />
     <Folder Include="Interfaces\Features\" />
     <Folder Include="Interfaces\Features\Companies\" />
     <Folder Include="Validators\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
   </ItemGroup>
 

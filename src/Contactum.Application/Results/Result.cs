@@ -25,7 +25,7 @@ namespace Contactum.Application.Results
             => new(false, default, error, ErrorType.NotFound);
 
         public static Result<T> ValidationError(string error)
-            => new(false, default, error, ErrorType.Validation);
+        => new(false, default, error, ErrorType.Validation);
     }
 
     public enum ErrorType

@@ -1,17 +1,12 @@
 using Contactum.Application.DependencyInjection;
 using Contactum.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-
-// builder.Services.AddScoped<IGetCompanybyIdHandler, CreateCompanyHandler>();
-// builder.Services.AddScoped<IGetAllCompaniesHandler, CreateCompanyHandler>();
-// builder.Services.AddScoped<IUpdateCompanyHandler, CreateCompanyHandler>();
-// builder.Services.AddScoped<IDeleteCompanyHandler, CreateCompanyHandler>();
-
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -23,6 +18,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<ContactumDbContext>();
+    db.Database.Migrate(); // applies pending; does NOT create migrations
 }
 
 app.UseHttpsRedirection();

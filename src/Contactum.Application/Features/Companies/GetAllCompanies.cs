@@ -1,5 +1,4 @@
 using System;
-using Contactum.Application.Interfaces.Features.Companies;
 using Contactum.Application.Interfaces.Repositories;
 using Contactum.Application.Results;
 using Contactum.Domain.Models;
@@ -23,4 +22,9 @@ public class GetAllCompaniesHandler : IGetAllCompaniesHandler
 
         return Result<IReadOnlyCollection<Company>>.Success(companies);
     }
+}
+
+public interface IGetAllCompaniesHandler
+{
+    Task<Result<IReadOnlyCollection<Company>>> HandleAsync();
 }
