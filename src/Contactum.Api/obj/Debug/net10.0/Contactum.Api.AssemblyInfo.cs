@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contactum.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2488a9c58d900dd2fa4e2f9072720948b6a81e34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c5247fe6844e00e0d716af0c491799ba165e90f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contactum.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contactum.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

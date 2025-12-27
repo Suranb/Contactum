@@ -9,7 +9,7 @@ public class CompanyConfiguration : IEntityTypeConfiguration<Company>
 {
     public void Configure(EntityTypeBuilder<Company> builder)
     {
-        builder.ToTable("companies");
+        builder.ToTable("company");
 
         // Primary key
         builder.HasKey(c => c.Id); builder.Property(c => c.Id).HasColumnName("id");
@@ -20,7 +20,20 @@ public class CompanyConfiguration : IEntityTypeConfiguration<Company>
         builder.Property(c => c.Description).HasColumnName("description").HasMaxLength(1000);
         builder.Property(c => c.CreatedAt).HasColumnName("created_at").IsRequired();
         builder.Property(c => c.UpdatedAt).HasColumnName("updated_at").IsRequired();
-        builder.HasOne(c => c.Owner).WithMany().HasForeignKey("owner_id");
-        builder.HasOne(c => c.ContactPerson).WithMany().HasForeignKey("person_id");
+        builder.Property(c => c.OwnerId).HasColumnName("owner_id");
+        builder.Property(c => c.ContactPersonId).HasColumnName("contact_person_id");
+        
+        // Relationships to Person
+        builder.HasOne(c => c.Owner)
+            .WithMany(p => p.OwnedCompanies)
+            .HasForeignKey(c => c.OwnerId)
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.SetNull); // If person is deleted, set owner_id to NULL
+        
+        builder.HasOne(c => c.ContactPerson)
+            .WithMany(p => p.ContactForCompanies)
+            .HasForeignKey(c => c.ContactPersonId)
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.SetNull);
     }
 }

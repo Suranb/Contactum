@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Contactum.Infrastructure.Migrations
 {
     [DbContext(typeof(ContactumDbContext))]
-    [Migration("20251222192402_ChangeModel")]
-    partial class ChangeModel
+    [Migration("20251225104747_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,10 @@ namespace Contactum.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("ContactPersonId")
+                        .HasColumnType("integer")
+                        .HasColumnName("contact_person_id");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
@@ -53,69 +57,92 @@ namespace Contactum.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("organization_number");
 
+                    b.Property<int?>("OwnerId")
+                        .HasColumnType("integer")
+                        .HasColumnName("owner_id");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
-                    b.Property<int?>("owner_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("person_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("owner_id");
+                    b.HasIndex("ContactPersonId");
 
-                    b.HasIndex("person_id");
+                    b.HasIndex("OwnerId");
 
-                    b.ToTable("companies", (string)null);
+                    b.ToTable("company", (string)null);
                 });
 
             modelBuilder.Entity("Contactum.Domain.Models.Person", b =>
                 {
-                    b.Property<int>("PersonId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PersonId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
-                        .HasColumnType("text");
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)")
+                        .HasColumnName("email");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("text");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("first_name");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("text");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("last_name");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasColumnName("phone_number");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_at");
 
-                    b.HasKey("PersonId");
+                    b.HasKey("Id");
 
-                    b.ToTable("Person");
+                    b.ToTable("person", (string)null);
                 });
 
             modelBuilder.Entity("Contactum.Domain.Models.Company", b =>
                 {
-                    b.HasOne("Contactum.Domain.Models.Person", "Owner")
-                        .WithMany()
-                        .HasForeignKey("owner_id");
-
                     b.HasOne("Contactum.Domain.Models.Person", "ContactPerson")
-                        .WithMany()
-                        .HasForeignKey("person_id");
+                        .WithMany("ContactForCompanies")
+                        .HasForeignKey("ContactPersonId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Contactum.Domain.Models.Person", "Owner")
+                        .WithMany("OwnedCompanies")
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("ContactPerson");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("Contactum.Domain.Models.Person", b =>
+                {
+                    b.Navigation("ContactForCompanies");
+
+                    b.Navigation("OwnedCompanies");
                 });
 #pragma warning restore 612, 618
         }

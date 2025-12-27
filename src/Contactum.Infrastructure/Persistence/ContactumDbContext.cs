@@ -11,11 +11,14 @@ public class ContactumDbContext : DbContext
     {
     }
     public DbSet<Company> Companies { get; set; }
-
+    public DbSet<Person> Persons { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfiguration(new CompanyConfiguration());
+        //modelBuilder.ApplyConfiguration(new CompanyConfiguration());
+        //modelBuilder.ApplyConfiguration(new PersonConfiguration());
+
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContactumDbContext).Assembly);
     }
 }

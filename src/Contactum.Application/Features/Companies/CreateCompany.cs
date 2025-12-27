@@ -12,6 +12,8 @@ public class CreateCompanyCommand
     public string Name { get; set; } = string.Empty;
     public string? Description { get; set; }
     public int? OrganizationNumber { get; set; }
+    public Person? Owner { get; set; }
+    public Person? ContactPerson { get; set; }
 }
 
 public class CreateCompanyCommandValidator : AbstractValidator<CreateCompanyCommand>
@@ -31,6 +33,12 @@ public class CreateCompanyCommandValidator : AbstractValidator<CreateCompanyComm
             .Must(BeValidNorwegianOrgNumber)
             .WithMessage("Invalid Norwegian organization number")
             .When(x => x.OrganizationNumber.HasValue);
+
+        /*RuleFor(x => x.Owner)
+            .SetValidator(new PersonValidator());
+
+        RuleFor(x => x.ContactPerson)
+            .SetValidator(new PersonValidator());*/
     }
     
     private bool BeValidNorwegianOrgNumber(int? orgNumber)
