@@ -5,10 +5,10 @@ using Contactum.Domain.Models;
 
 namespace Contactum.Application.Features.Companies;
 
-public class GetAllCompaniesHandler : IGetAllCompaniesHandler
+public class GetAllCompanyHandler : IGetAllCompanyHandler
 {
     private readonly ICompanyRepository _companyRepository;
-    public GetAllCompaniesHandler(ICompanyRepository companyRepository)
+    public GetAllCompanyHandler(ICompanyRepository companyRepository)
     {
         _companyRepository = companyRepository;
     }
@@ -24,7 +24,7 @@ public class GetAllCompaniesHandler : IGetAllCompaniesHandler
     }
 }
 
-public interface IGetAllCompaniesHandler
+public interface IGetAllCompanyHandler
 {
     Task<Result<IReadOnlyCollection<Company>>> HandleAsync();
 }

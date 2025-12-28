@@ -11,10 +11,11 @@ public static class DependencyInjection
         // Register all handlers
         services.AddScoped<IGetCompanyByIdHandler, GetCompanyByIdHandler>();
         services.AddScoped<ICreateCompanyHandler, CreateCompanyHandler>();
-        services.AddScoped<IGetAllCompaniesHandler, GetAllCompaniesHandler>();
+        services.AddScoped<IGetAllCompanyHandler, GetAllCompanyHandler>();
+        services.AddScoped<ICreateCompanyBulkHandler, CreateCompaniesBulkHandler>();
 
         services.AddValidatorsFromAssemblyContaining<CreateCompanyCommandValidator>();
-        
+
         return services;
     }
 }

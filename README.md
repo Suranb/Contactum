@@ -45,7 +45,7 @@ dotnet ef database update --project src/Contactum.Infrastructure --startup-proje
 dotnet ef database drop --project src/Contactum.Infrastructure --startup-project src/Contactum.API --force
 
 # 2. Remove ALL migrations
-rm -rf src/Contactum.Infrastructure/Migrations/*
+rm src/Contactum.Infrastructure/Migrations/*
 
 # OR on Windows:
 # Remove-Item -Path Contactum.Infrastructure/Migrations/* -Recurse -Force
@@ -58,4 +58,5 @@ dotnet ef database update --project src/Contactum.Infrastructure --startup-proje
 # 5. Check for updates
 dotnet ef migrations add CheckForChanges --project src/Contactum.Infrastructure --startup-project src/Contactum.API
 
+# 6. 
 dotnet ef migrations remove --project src/Contactum.Infrastructure --startup-project src/Contactum.API

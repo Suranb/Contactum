@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LsrZrKQ0wHo=",
+  "dgSpecHash": "6m5o4z71DNI=",
   "success": true,
-  "projectFilePath": "/Users/suranbasharati/Contactum/src/Contactum.Application/Contactum.Application.csproj",
+  "projectFilePath": "C:\\Development\\Contactum\\src\\Contactum.Application\\Contactum.Application.csproj",
   "expectedPackageFiles": [
-    "/Users/suranbasharati/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
-    "/Users/suranbasharati/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
-    "/Users/suranbasharati/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.1/microsoft.extensions.dependencyinjection.10.0.1.nupkg.sha512",
-    "/Users/suranbasharati/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.1/microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512"
+    "C:\\Users\\suran\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\suran\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
+    "C:\\Users\\suran\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.1\\microsoft.extensions.dependencyinjection.10.0.1.nupkg.sha512",
+    "C:\\Users\\suran\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.1\\microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512"
   ],
   "logs": []
 }

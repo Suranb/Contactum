@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Contactum.Infrastructure.Migrations
 {
     [DbContext(typeof(ContactumDbContext))]
-    [Migration("20251225104747_InitialCreate")]
+    [Migration("20251228073754_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

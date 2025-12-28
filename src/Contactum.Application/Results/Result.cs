@@ -17,15 +17,15 @@ namespace Contactum.Application.Results
 
         public static Result<T> Success(T value)
             => new(true, value, null, ErrorType.None);
-
+        
         public static Result<T> Failure(string error, ErrorType errorType = ErrorType.Failure)
             => new(false, default, error, errorType);
 
         public static Result<T> NotFound(string error = "Resource not found")
             => new(false, default, error, ErrorType.NotFound);
 
-        public static Result<T> ValidationError(string error)
-        => new(false, default, error, ErrorType.Validation);
+        public static Result<T> ValidationError(string error) =>
+            new(false, default, error, ErrorType.Validation);
     }
 
     public enum ErrorType
